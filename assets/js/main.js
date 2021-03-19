@@ -13,7 +13,7 @@ var settings = {
 			delay: 5000,
 
 		// Parallax intensity (between 0 and 1; higher = more intense, lower = less intense; 0 = off)
-			parallax: 0.25
+			parallax: 0.99
 
 	}
 
@@ -278,7 +278,7 @@ var settings = {
 				.append('<a href="#menu" class="close"></a>')
 				.appendTo($body)
 				.panel({
-					delay: 500,
+					delay: 5000,
 					hideOnClick: true,
 					hideOnSwipe: true,
 					resetScroll: true,
