@@ -1,18 +1,12 @@
-/*
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
-
 var settings = {
 
-	swiper-container: {
+	banner: {
 
 		// Indicators (= the clickable dots at the bottom).
 			indicators: true,
 
 		// Transition speed (in ms)
-		// For timing purposes only. It *must* match the transition speed of "#swiper-container > article".
+		// For timing purposes only. It *must* match the transition speed of "#banner > article".
 			speed: 1500,
 
 		// Transition delay (in ms)
@@ -111,7 +105,7 @@ var settings = {
 	};
 
 	/**
-	 * Custom swiper-container slider for Slate.
+	 * Custom banner slider for Slate.
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._slider = function(options) {
@@ -257,7 +251,7 @@ var settings = {
 		var	$window 	= $(window),
 			$body 		= $('body'),
 			$header 	= $('#header'),
-			$swiper-container 	= $('.swiper-container');
+			$banner 	= $('.banner');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -277,7 +271,7 @@ var settings = {
 			});
 
 		// Banner.
-			$swiper-container._slider(settings.swiper-container);
+			$banner._slider(settings.banner);
 
 		// Menu.
 			$('#menu')
@@ -296,12 +290,12 @@ var settings = {
 			if (skel.vars.IEVersion < 9)
 				$header.removeClass('alt');
 
-			if ($swiper-container.length > 0
+			if ($banner.length > 0
 			&&	$header.hasClass('alt')) {
 
 				$window.on('resize', function() { $window.trigger('scroll'); });
 
-				$swiper-container.scrollex({
+				$banner.scrollex({
 					bottom:		$header.outerHeight(),
 					terminate:	function() { $header.removeClass('alt'); },
 					enter:		function() { $header.addClass('alt'); },
