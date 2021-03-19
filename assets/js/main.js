@@ -51,7 +51,7 @@ var settings = {
 		}
 
 		if (!intensity)
-			intensity = 0.25;
+			intensity = 0.99;
 
 		$this.each(function() {
 
