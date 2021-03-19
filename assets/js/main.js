@@ -6,13 +6,13 @@
 
 var settings = {
 
-	banner: {
+	swiper-container: {
 
 		// Indicators (= the clickable dots at the bottom).
 			indicators: true,
 
 		// Transition speed (in ms)
-		// For timing purposes only. It *must* match the transition speed of "#banner > article".
+		// For timing purposes only. It *must* match the transition speed of "#swiper-container > article".
 			speed: 1500,
 
 		// Transition delay (in ms)
@@ -111,7 +111,7 @@ var settings = {
 	};
 
 	/**
-	 * Custom banner slider for Slate.
+	 * Custom swiper-container slider for Slate.
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._slider = function(options) {
@@ -257,7 +257,7 @@ var settings = {
 		var	$window 	= $(window),
 			$body 		= $('body'),
 			$header 	= $('#header'),
-			$banner 	= $('.banner');
+			$swiper-container 	= $('.swiper-container');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -277,7 +277,7 @@ var settings = {
 			});
 
 		// Banner.
-			$banner._slider(settings.banner);
+			$swiper-container._slider(settings.swiper-container);
 
 		// Menu.
 			$('#menu')
@@ -296,12 +296,12 @@ var settings = {
 			if (skel.vars.IEVersion < 9)
 				$header.removeClass('alt');
 
-			if ($banner.length > 0
+			if ($swiper-container.length > 0
 			&&	$header.hasClass('alt')) {
 
 				$window.on('resize', function() { $window.trigger('scroll'); });
 
-				$banner.scrollex({
+				$swiper-container.scrollex({
 					bottom:		$header.outerHeight(),
 					terminate:	function() { $header.removeClass('alt'); },
 					enter:		function() { $header.addClass('alt'); },
