@@ -150,7 +150,7 @@ var settings = {
 				if (isLocked || pos == x)
 					return;
 
-				isLocked = true;
+				isLocked = false;
 
 				if (stop)
 					window.clearInterval(intervalId);
