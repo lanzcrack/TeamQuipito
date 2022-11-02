@@ -1246,14 +1246,13 @@
 /* Wrapper */
 
 	#wrapper {
-		width: 64em;
+		width: 15em;
 		margin: 0 auto;
-		max-width: calc(100% - 4em);
-		padding: 4em 0 2em 0;
+		padding: 1em 0em 1em 0em;
 	}
 
 		#wrapper > .main {
-			margin-bottom: 4em;
+			margin-bottom: 0em;
 		}
 
 		@media screen and (max-width: 980px) {
