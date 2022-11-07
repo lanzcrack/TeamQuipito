@@ -3527,6 +3527,7 @@
 			.grid-style > :nth-child(1n + 1),
 			.grid-style > :nth-child(1n) {
 				width: calc(100% + 1rem);
+				margin: 0 0 2.5rem -8rem;
 			}
 
 		}
