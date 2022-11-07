@@ -2669,6 +2669,12 @@
 
 /* Wrapper */
 
+	.ss {
+	margin:  auto;
+	Width: 20rem;
+	
+	}
+
 	.wrapper {
 		padding: 6rem 0 4rem 0 ;
 		position: relative;
@@ -3403,8 +3409,8 @@
 /* Flexgrid */
 
 	.grid-style {
-		width: 100%;
-		margin: 0 0 2.5rem 0;
+		width: 70%;
+		margin: 0 0 2.5rem 12rem;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
